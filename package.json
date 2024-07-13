@@ -11,7 +11,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "format": "prettier --write src/",
-    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts,.vue --fix"
+    "lint": "eslint . --ext .js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts,.vue --fix",
+    "docker-build":"docker build -t home .",
+    "docker-deploy":"npm run docker-build && docker run -p 12445:12445 -d home"
   },
   "dependencies": {
     "@worstone/vue-aplayer": "^1.0.6",
